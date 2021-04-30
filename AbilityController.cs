@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AbilityController : MonoBehaviour
 {
@@ -14,9 +12,7 @@ public class AbilityController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-
-        }
+        ability[0].Use();
+        ability[1].Use();
     }
 }
