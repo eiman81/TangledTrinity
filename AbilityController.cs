@@ -3,6 +3,9 @@
 public class AbilityController : MonoBehaviour
 {
     public Ability[] ability;
+
+    public GameObject fireball;
+
     PlayerStats stats;
 
     void Awake()
