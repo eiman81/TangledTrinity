@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public abstract class Ability : ScriptableObject
 {
     // Ability properties
     public int cooldown;
     public int amount;
+    public bool isCoolingDown = false;
 
     // Reference a character's stats so we can access properties such as health
     GameObject player;
@@ -25,21 +27,18 @@ public abstract class Ability : ScriptableObject
     {
         public override void Use()
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.Alpha1) & !isCoolingDown)
             {
                 base.Use();
+
                 // Create fireball effect
                 projectile = player.GetComponent<AbilityController>().fireball;
                 end = GameObject.Find("end");
                 
                 GameObject projectileInstance;
-                projectileInstance = Instantiate(projectile, end.transform.position, Quaternion.id);
-                //projectileInstance.AddForce(end.forward* 5000);
-                //projectileInstance.transform.position()
-
-
-        // below vvv should be enemy.health += amount;
-                stats.health += amount;
+                projectileInstance = Instantiate(projectile, end.transform.position, Quaternion.identity);
+                projectileInstance.GetComponent<Projectile>().p_amount = amount;
+                isCoolingDown = true;
             }
           
         }
@@ -57,5 +56,11 @@ public abstract class Ability : ScriptableObject
                 stats.health += amount;
             }
         }
+    }
+
+    public IEnumerator CoolDown ()
+    {
+        yield return new WaitForSeconds(cooldown);
+        isCoolingDown = false;
     }
 }
