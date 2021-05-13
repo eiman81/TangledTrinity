@@ -38,9 +38,7 @@ public abstract class Ability : ScriptableObject
                 GameObject projectileInstance;
                 projectileInstance = Instantiate(projectile, end.transform.position, Quaternion.identity);
                 projectileInstance.GetComponent<Projectile>().p_amount = amount;
-               // isCoolingDown = true;
             }
-          
         }
     }
 
@@ -56,11 +54,5 @@ public abstract class Ability : ScriptableObject
                 stats.health += amount;
             }
         }
-    }
-
-    public IEnumerator CoolDown ()
-    {
-        yield return new WaitForSeconds(cooldown);
-        isCoolingDown = false;
     }
 }

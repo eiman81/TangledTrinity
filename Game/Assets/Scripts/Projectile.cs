@@ -23,6 +23,7 @@ public class Projectile : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             other.gameObject.GetComponent<PlayerStats>().health += p_amount;
+            Destroy (gameObject);
         }
     }
 }
