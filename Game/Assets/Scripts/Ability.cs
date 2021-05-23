@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 
+[CreateAssetMenu (menuName = "Ability")]
 public abstract class Ability : ScriptableObject
 {
     // Ability properties
@@ -22,7 +22,7 @@ public abstract class Ability : ScriptableObject
         stats = player.GetComponent<PlayerStats>();
     }
 
-    [CreateAssetMenu(menuName = "Ability/Fireball")]
+
     public class Fireball : Ability
     {
         public override void Use()
@@ -42,7 +42,6 @@ public abstract class Ability : ScriptableObject
         }
     }
 
-    [CreateAssetMenu(menuName = "Ability/Heal")]
     public class Heal : Ability
     {
         public override void Use()

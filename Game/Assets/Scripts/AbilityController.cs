@@ -18,4 +18,6 @@ public class AbilityController : MonoBehaviour
         ability[0].Use();
         ability[1].Use();
     }
+
+
 }
