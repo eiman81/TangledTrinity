@@ -8,16 +8,14 @@ public class AbilityController : MonoBehaviour
 
     PlayerStats stats;
 
-    void Awake()
+    void Awake ()
     {
-        stats = GetComponent<PlayerStats>();
+        stats = GetComponent<PlayerStats> ();
     }
 
-    void Update()
+    void Update ()
     {
-        ability[0].Use();
-        ability[1].Use();
+        ability[0].Use ();
+        ability[1].Use ();
     }
-
-
 }

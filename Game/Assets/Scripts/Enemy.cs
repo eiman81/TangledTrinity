@@ -1,22 +1,43 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    PlayerStats stats;
-
-    public GameObject destroyEffect;
+    public float lookRadius = 10f;
+    Transform target;
+    NavMeshAgent agent;
 
     private void Awake()
     {
-        stats = GetComponent<PlayerStats>();
+        target = GameObject.Find ("Player").transform;
+        agent = GetComponent<NavMeshAgent> ();
     }
 
     private void Update()
     {
-        if (stats.health <= 0)
+        float distance = Vector3.Distance (target.position, transform.position);
+
+        if (distance <= lookRadius)
         {
-            Destroy(gameObject);
-            Instantiate(destroyEffect, transform.position, Quaternion.identity);
+            agent.SetDestination (target.position);
+
+            if (distance <= agent.stoppingDistance)
+            {
+                FaceTarget ();
+            }
         }
+    }
+
+    void FaceTarget ()
+    {
+        Vector3 direction = (target.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation (new Vector3 (direction.x, 0, direction.y));
+        transform.rotation = Quaternion.Slerp (transform.rotation, lookRotation, Time.deltaTime * 5f);
+    }
+
+    private void OnDrawGizmosSelected ()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere (transform.position, lookRadius);
     }
 }
