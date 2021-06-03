@@ -29,6 +29,7 @@ public class Fireball : Ability
             }
         }
 
+        // Cooldown
         if (x > 0)
             x -= Time.deltaTime;
 

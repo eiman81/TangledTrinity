@@ -6,24 +6,28 @@ public class Projectile : MonoBehaviour
     [HideInInspector]
     public int p_amount;
 
+    Vector3 direction;
+
     GameObject player;
 
     private void Awake ()
     {
         player = GameObject.Find ("Player");
+        direction = player.transform.forward;
     }
 
     void Update()
     {
-        transform.position -= (player.transform.forward * speed * Time.deltaTime);
+        transform.position -= (direction * speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        Destroy (gameObject);
+
         if (other.gameObject.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<PlayerStats>().health += p_amount;
-            Destroy (gameObject);
+            other.gameObject.GetComponent<PlayerStats> ().TakeDamage (p_amount); 
         }
     }
 }
