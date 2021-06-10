@@ -13,7 +13,6 @@ public class Player : Character
     private void Awake ()
     {
         currentHealth = stats.health;
-        maxHealth = stats.health;
         ability = stats.abilities;
         Speed = stats.speed;
     }
