@@ -14,7 +14,7 @@ public class Heal : Ability
             if (x == 0f)
             {
                 // Create heal effect
-                stats.health += amount;
+                stats.currentHealth += amount;
 
                 x = coolDown;
             }

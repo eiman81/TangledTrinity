@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2956641940199231175}
   - component: {fileID: 5650420698576627725}
   - component: {fileID: 3616740957879393240}
-  - component: {fileID: 1812997598102225153}
   - component: {fileID: 1129044927}
   - component: {fileID: 1129044928}
   m_Layer: 0
@@ -59,6 +58,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -70,6 +70,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -107,22 +108,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d9db10c0c397ce47b021b8d05e2e3d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyEffect: {fileID: 2991020044556363078, guid: d6a27aeffa9a6aa4291dec5109b024fc,
+  DeathEffect: {fileID: 2991020044556363078, guid: d6a27aeffa9a6aa4291dec5109b024fc,
     type: 3}
+  maxHealth: 50
+  currentHealth: 50
   lookRadius: 10
---- !u!114 &1812997598102225153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422458202594245768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf9cfc6b52b65c4e92b2ff498f30cf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 50
 --- !u!54 &1129044927
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -148,10 +138,10 @@ NavMeshAgent:
   m_GameObject: {fileID: 1422458202594245768}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1
+  m_Radius: 1.5
   m_Speed: 3
   m_Acceleration: 20
-  avoidancePriority: 50
+  avoidancePriority: 99
   m_AngularSpeed: 120
   m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1

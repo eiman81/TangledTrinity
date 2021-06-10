@@ -6,11 +6,6 @@ public class MenuManager : MonoBehaviour
 {
     public GameObject pauseMenu;
     public Slider sensitivity;
-    public Image healthBar;
-
-    public Camera cam;
-
-    PlayerStats stats;
 
     [HideInInspector]
     public bool isPaused = false;
@@ -18,20 +13,12 @@ public class MenuManager : MonoBehaviour
     private void Awake ()
     {
         DontDestroyOnLoad (this);
-        Resume ();
-        stats = GameObject.Find ("Player").GetComponent<PlayerStats> ();
+        Resume (); // comment this
     }
 
     private void Update ()
     {
         PauseGame ();
-
-        healthBar.fillAmount = stats.health / 50f;
-
-        if (stats.health <= 0)
-        {
-            cam.gameObject.SetActive (true);
-        }
     }
 
     public void ChangeSenstivity(float newSensitivity)

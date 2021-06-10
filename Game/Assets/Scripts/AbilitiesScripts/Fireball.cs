@@ -14,11 +14,11 @@ public class Fireball : Ability
         base.Use ();
 
         if (Input.GetKeyDown (KeyCode.Alpha1))
-        {  
+        {
             if (x == 0f)
             {
                 // Create fireball effect
-                projectile = player.GetComponent<AbilityController> ().fireball;
+                projectile = player.GetComponent<Player> ().fireball;
                 end = GameObject.Find ("End");
 
                 GameObject projectileInstance;

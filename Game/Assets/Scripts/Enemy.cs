@@ -1,16 +1,32 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Character
 {
     public float lookRadius = 10f;
     Transform target;
     NavMeshAgent agent;
 
+    public enum EnemyType {Minion, Flyer, Boss};
+    public EnemyType enemyTypes;
+
     private void Awake()
     {
         target = GameObject.Find ("Player").transform;
         agent = GetComponent<NavMeshAgent> ();
+
+        switch (enemyTypes)
+        {
+            case EnemyType.Minion:
+                currentHealth = 50;
+                break;
+            case EnemyType.Flyer:
+                currentHealth = 30;
+                break;
+            case EnemyType.Boss:
+                currentHealth = 70;
+                break;
+        }
     }
 
     private void Update()

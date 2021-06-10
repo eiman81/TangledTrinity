@@ -2,7 +2,10 @@
 
 public class Projectile : MonoBehaviour
 {
+    public float destroyTime;
+
     public float speed;
+
     [HideInInspector]
     public int p_amount;
 
@@ -19,6 +22,8 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         transform.position -= (direction * speed * Time.deltaTime);
+
+        Destroy (gameObject, destroyTime);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,7 +32,7 @@ public class Projectile : MonoBehaviour
 
         if (other.gameObject.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<PlayerStats> ().TakeDamage (p_amount); 
+            other.gameObject.GetComponent<Enemy> ().TakeDamage (p_amount); 
         }
     }
 }

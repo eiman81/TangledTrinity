@@ -9,12 +9,13 @@ public class Ability : ScriptableObject
     // Reference a character's stats so we can access properties such as health
     [HideInInspector]
     public GameObject player;
+
     [HideInInspector]
-    public PlayerStats stats;
+    public Player stats;
 
     public virtual void Use ()
     {
         player = GameObject.FindWithTag ("Player");
-        stats = player.GetComponent<PlayerStats> ();
+        stats = player.GetComponent<Player> ();
     }
 }

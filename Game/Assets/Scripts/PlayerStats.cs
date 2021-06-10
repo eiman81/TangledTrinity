@@ -1,24 +1,16 @@
 ﻿using UnityEngine;
 
-public class PlayerStats : MonoBehaviour
+[CreateAssetMenu (fileName = "Player")]
+public class PlayerStats : ScriptableObject
 {
-    public GameObject DeathEffect;
+    public string playerName;
+    public string description;
+    public int age;
 
-    public float health = 50f;
+    public float speed;
+    public float health;
 
-    public void TakeDamage (float amount)
-    {
-        health -= amount;
+    public GameObject playerPrefab;
 
-        if (health <= 0)
-        {
-            Die ();
-        }
-    }
-
-    public void Die ()
-    {
-        Instantiate (DeathEffect, transform.position, Quaternion.identity);
-        gameObject.SetActive (false);
-    }
+    public Ability[] abilities;
 }
