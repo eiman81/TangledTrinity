@@ -7,6 +7,8 @@ public class MenuManager : MonoBehaviour
     public GameObject pauseMenu;
     public Slider sensitivity;
 
+    public bool TutorialDone = false;
+
     [HideInInspector]
     public bool isPaused = false;
 
@@ -33,7 +35,6 @@ public class MenuManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene ().name == "Menu")
             SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
-        Resume ();
     }
 
     public void QuitGame ()
@@ -43,7 +44,7 @@ public class MenuManager : MonoBehaviour
 
     private void PauseGame ()
     {
-        if (SceneManager.GetActiveScene().name != "Menu")
+        if (SceneManager.GetActiveScene().name != "Menu" && TutorialDone)
         {
             if (Input.GetKeyDown (KeyCode.Escape))
             {
@@ -62,6 +63,7 @@ public class MenuManager : MonoBehaviour
         isPaused = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        TutorialDone = true;
     }
 
     void Pause()
@@ -69,6 +71,13 @@ public class MenuManager : MonoBehaviour
         pauseMenu.SetActive (true);
         Time.timeScale = 0f;
         isPaused = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void TutorialStarter ()
+    {
+        Time.timeScale = 0f;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }

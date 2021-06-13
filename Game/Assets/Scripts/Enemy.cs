@@ -12,7 +12,7 @@ public class Enemy : Character
 
     private void Awake()
     {
-        target = GameObject.Find ("Player").transform;
+        target = GameObject.FindWithTag ("Player").transform;
         agent = GetComponent<NavMeshAgent> ();
 
         switch (enemyTypes)

@@ -15,7 +15,7 @@ public class Projectile : MonoBehaviour
 
     private void Awake ()
     {
-        player = GameObject.Find ("Player");
+        player = GameObject.FindWithTag ("Player");
         direction = player.transform.forward;
     }
 

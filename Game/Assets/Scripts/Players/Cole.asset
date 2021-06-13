@@ -15,7 +15,7 @@ MonoBehaviour:
   playerName: Cole Woolworth
   description: A legendary hero.
   age: 17
-  speed: 7
+  speed: 8
   health: 80
   playerPrefab: {fileID: 280508434844920006, guid: 301644e380e77f8479a49bf0056f693e,
     type: 3}

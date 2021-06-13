@@ -15,7 +15,7 @@ MonoBehaviour:
   playerName: Neo Callisto
   description: A renown warrior.
   age: 18
-  speed: 6
+  speed: 8
   health: 100
   playerPrefab: {fileID: 280508434844920006, guid: d875a0bda20e5144b94a441ac7e4baed,
     type: 3}

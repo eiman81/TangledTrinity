@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake ()
     {
-        player = GameObject.Find ("Player").GetComponent<Player> ();
+        player = GameObject.FindWithTag ("Player").GetComponent<Player> ();
     }
 
     void Update()

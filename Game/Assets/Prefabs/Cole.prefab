@@ -18,7 +18,7 @@ GameObject:
   m_Name: Cam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &282840814
@@ -204,13 +204,13 @@ GameObject:
   - component: {fileID: 280508434844920003}
   - component: {fileID: 280508434844920000}
   - component: {fileID: 1668381103}
-  - component: {fileID: 164323594}
   - component: {fileID: 2129869931}
+  - component: {fileID: 1618518510}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Cole
   m_TagString: Player
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &280508434844919997
@@ -306,7 +306,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 1
---- !u!195 &164323594
+--- !u!114 &2129869931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280508434844920006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0cf2905370436419acb80bb721c0c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeathEffect: {fileID: 2991020044556363078, guid: d6a27aeffa9a6aa4291dec5109b024fc,
+    type: 3}
+  currentHealth: 0
+  stats: {fileID: 11400000, guid: e040318b33b718d47afcc6b5e14f1672, type: 2}
+  ability: []
+  fireball: {fileID: 5044976265549041901, guid: 9967dd866ea92f04e82d3addaf0262b0,
+    type: 3}
+--- !u!195 &1618518510
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -326,28 +345,8 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 1
-  m_WalkableMask: 2
+  m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &2129869931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280508434844920006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec0cf2905370436419acb80bb721c0c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DeathEffect: {fileID: 2991020044556363078, guid: d6a27aeffa9a6aa4291dec5109b024fc,
-    type: 3}
-  maxHealth: 0
-  currentHealth: 0
-  stats: {fileID: 11400000, guid: e040318b33b718d47afcc6b5e14f1672, type: 2}
-  ability: []
-  fireball: {fileID: 5044976265549041901, guid: 9967dd866ea92f04e82d3addaf0262b0,
-    type: 3}
 --- !u!1 &6067074807736460973
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +360,7 @@ GameObject:
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4982290118553865153
