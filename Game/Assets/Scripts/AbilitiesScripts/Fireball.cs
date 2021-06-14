@@ -7,8 +7,6 @@ public class Fireball : Ability
     GameObject projectile;
     GameObject end;
 
-    float x = 0f;
-
     public override void Use ()
     {
         base.Use ();
@@ -18,7 +16,7 @@ public class Fireball : Ability
             if (x == 0f)
             {
                 // Create fireball effect
-                projectile = player.GetComponent<Player> ().fireball;
+                projectile = player.fireball;
                 end = GameObject.Find ("End");
 
                 GameObject projectileInstance;

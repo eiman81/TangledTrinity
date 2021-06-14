@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public Image healthBar;
+    public Text ab1, ab2, ab3;
 
     Player player;
 
@@ -24,5 +25,9 @@ public class GameManager : MonoBehaviour
         {
             cam.SetActive (true);
         }
+
+        ab1.text = Mathf.RoundToInt(player.GetComponent<Player> ().ability[0].x).ToString ();
+        ab2.text = Mathf.RoundToInt(player.GetComponent<Player> ().ability[1].x).ToString ();
+        ab3.text = Mathf.RoundToInt(player.GetComponent<Player> ().ability[2].x).ToString ();
     }
 }

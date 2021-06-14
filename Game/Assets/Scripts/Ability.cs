@@ -5,17 +5,14 @@ public class Ability : ScriptableObject
     // Ability properties
     public int amount;
     public float coolDown;
+    public float x;
     
     // Reference a character's stats so we can access properties such as health
     [HideInInspector]
-    public GameObject player;
-
-    [HideInInspector]
-    public Player stats;
+    public Player player;
 
     public virtual void Use ()
     {
-        player = GameObject.FindWithTag ("Player");
-        stats = player.GetComponent<Player> ();
+        player = GameObject.FindWithTag ("Player").GetComponent<Player>();
     }
 }
