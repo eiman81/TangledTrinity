@@ -15,7 +15,7 @@ public class MenuManager : MonoBehaviour
     private void Awake ()
     {
         DontDestroyOnLoad (this);
-        Resume (); // comment this
+        //Resume (); // comment this
     }
 
     private void Update ()
@@ -51,7 +51,7 @@ public class MenuManager : MonoBehaviour
                 if (isPaused)
                     Resume ();
                 else
-                    Pause ();
+                    Pause (pauseMenu);
             }
         }
     }
@@ -66,18 +66,11 @@ public class MenuManager : MonoBehaviour
         TutorialDone = true;
     }
 
-    void Pause()
+    public void Pause(GameObject menu)
     {
-        pauseMenu.SetActive (true);
+        menu.SetActive (true);
         Time.timeScale = 0f;
         isPaused = true;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-    }
-
-    public void TutorialStarter ()
-    {
-        Time.timeScale = 0f;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
