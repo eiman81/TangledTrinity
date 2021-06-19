@@ -12,8 +12,12 @@ public class GameManager : MonoBehaviour
 
     public GameObject cam;
 
+    public GameObject player1;
+    public GameObject spawnPoint;
+
     private void Awake ()
     {
+        Instantiate (player1, spawnPoint.transform.position, player1.transform.rotation);
         player = GameObject.FindWithTag ("Player").GetComponent<Player> ();
     }
 

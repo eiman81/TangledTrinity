@@ -15,7 +15,7 @@ public class MenuManager : MonoBehaviour
     private void Awake ()
     {
         DontDestroyOnLoad (this);
-        //Resume (); // comment this
+        Resume (); // comment this
     }
 
     private void Update ()

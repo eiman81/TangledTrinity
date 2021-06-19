@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Water
+  m_Shader: {fileID: -6465566751694194690, guid: 1c8be92c2b4438c41a331330906fc828,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainNormal:
+        m_Texture: {fileID: 2800000, guid: b8d6f4f5765362d4aa62d03df0024970, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SecondNormal:
+        m_Texture: {fileID: 2800000, guid: f2e546a3e84de004ab30407d95bb82b1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Depth: -0.77
+    - _Displacement: 0
+    - _NormalStrength: 1
+    - _Smoothness: 0.808
+    - _Strength: 0.4
+    - _TimeVar: 100
+    m_Colors:
+    - _DeepColour: {r: 0.09714309, g: 0.4667732, b: 0.5566037, a: 0.7176471}
+    - _ShallowColor: {r: 0.15801886, g: 0.45587328, b: 0.5, a: 0.7294118}

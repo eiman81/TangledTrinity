@@ -13,7 +13,44 @@ MonoBehaviour:
   m_Name: Cole
   m_EditorClassIdentifier: 
   playerName: Cole Woolworth
-  description: A legendary hero.
+  description: "Losing his parents at a young age, Cole was living on his own for
+    a long time since. He came from a small village close to a mysterious jungle,
+    where no one was allowed to step in. In all his free time he looked for ways
+    to just go into the jungle once. He was a weird kid, always had severe fevers
+    to the point that if you touched him your hand would burn, the village knew this
+    was normal now. Just like his high temperature condition, he was also hot tempered
+    and would get angry at every small thing. Cole was weirdly strong for his age
+    too and had an excellent balance he used to show off in school talent shows by
+    running along a tightrope, well more like a string because it was actually hard
+    to see. It was surprising how the string didn\u2019t break, almost as if Cole
+    was weightless. The only way village doctors could reason Cole\u2019s condition
+    was by stating that all this was because of a sudden mutation of the hypothalamus
+    gland (a gland controlling body temperature and appetite) at birth, however that
+    didn\u2019t explain a lot of stuff happening to him on a daily basis, and one
+    of the biggest mysteries of the village; Cole\u2019s parents disappeared shortly
+    after his birth, they didn\u2019t leave the hospital from any exit, it\u2019s
+    like they disappeared into thin air, \u201Cor maybe Cole ate them!\u201D said
+    the doctor jokingly. Cole didn\u2019t see any future in the village, he was just
+    going to be mocked forever if he stayed, his potential would be wasted. What
+    potential, heating up, walking on a line, pull ups? He thought to himself, but
+    his decision was made up, he was going to that forest even if it meant death,
+    he knew he was more capable than every single person in that village to handle
+    anything. He stormed towards the guards protecting the jungle (the only exit
+    from the village), he couldn\u2019t control his anger, shaking and stumbling
+    he felt heat coming straight from his palms. He tunnel visioned he could only
+    see his palms until he made a horrible mistake. As soon as he lifted his palms
+    to look at them, he felt burning like never before and passed out right in front
+    of the guards. His hopes and dreams of finally getting out of this village and
+    exploring the world was ruined or was it? The villagers tied him down and put
+    sticks on him and put it on fire, however he didn\u2019t die and suddenly the
+    mountain of sticks exploded and there he came right out of the glowing blaze
+    walking slowly but with determination. Everyone was shocked, the fire had been
+    going for 5 minutes. How was this kid still in one piece looking stronger and
+    feeling more alive than ever? He picked up everything he needed from the village
+    and made his way to the forest, this time no one stood in his way. There was
+    now a burnt spot on one of his eyes, a spot that would always remind him to only
+    listen to his heart and nobody else. A scar that would lead him on the journey
+    to save the world and a twisted fate: The tangled trinity."
   age: 17
   speed: 8
   health: 80
@@ -21,4 +58,5 @@ MonoBehaviour:
     type: 3}
   abilities:
   - {fileID: 11400000, guid: bcde21011d85b254b9b2514c54613453, type: 2}
+  - {fileID: 11400000, guid: 29485c758ab7f3e40a3f88bef6aa17c5, type: 2}
   - {fileID: 11400000, guid: 29485c758ab7f3e40a3f88bef6aa17c5, type: 2}

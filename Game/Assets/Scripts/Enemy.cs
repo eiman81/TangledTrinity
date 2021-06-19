@@ -10,7 +10,7 @@ public class Enemy : Character
     public enum EnemyType {Minion, Flyer, Boss};
     public EnemyType enemyTypes;
 
-    private void Awake()
+    private void Start()
     {
         target = GameObject.FindWithTag ("Player").transform;
         agent = GetComponent<NavMeshAgent> ();
