@@ -19,7 +19,6 @@ public class FireWall : Ability
 
                 GameObject projectileInstance;
                 projectileInstance = Instantiate (effect, player.transform.position, effect.transform.rotation);
-                projectileInstance.GetComponent<Projectile> ().p_amount = HealthAmount;
 
                 x = coolDown;
             }

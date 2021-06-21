@@ -19,7 +19,6 @@ public class Fireball : Ability
 
                 GameObject projectileInstance;
                 projectileInstance = Instantiate (effect, end.transform.position, Quaternion.identity);
-                projectileInstance.GetComponent<Projectile> ().p_amount = HealthAmount;
 
                 x = coolDown;
             }

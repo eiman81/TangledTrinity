@@ -4,17 +4,14 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float destroyTime;
-
     public float speed;
 
-    [HideInInspector]
-    public int p_amount;
+    public Ability ability;
 
     Vector3 direction;
 
     GameObject player;
-    [SerializeField]
-    bool containsEnemy;
+
     bool hasMoved = false;
 
     public enum ProjectileType { Fireball, FireWall };
@@ -51,18 +48,9 @@ public class Projectile : MonoBehaviour
         {
             case ProjectileType.Fireball:
                 if (other.gameObject.CompareTag ("Enemy"))
-                    other.gameObject.GetComponent<Enemy> ().TakeDamage (p_amount);
+                    other.gameObject.GetComponent<Enemy> ().TakeDamage (ability.HealthAmount);
                 Destroy (gameObject);
                 
-                break;
-            case ProjectileType.FireWall:
-                containsEnemy = true;
-                    /*if (other.gameObject.CompareTag ("Enemy") && containsEnemy)
-                    {
-                        other.gameObject.GetComponent<Enemy> ().TakeDamage (p_amount);
-                        Cooldown (1f);
-                    }*/
-
                 break;
         }
     }
@@ -72,20 +60,14 @@ public class Projectile : MonoBehaviour
         switch (projectileTypes)
         {
             case ProjectileType.FireWall:
-                containsEnemy = true;
-                if (other.gameObject.CompareTag ("Enemy") && containsEnemy)
+                /* (other.gameObject.CompareTag ("Enemy"))
                 {
-                    FireWallDamage (2f, other);
-                }
-
+                    StartCoroutine (FireWallDamage (2f, other));
+                }*/
+                while (other.gameObject.CompareTag ("Enemy"))
+                    StartCoroutine (FireWallDamage (2f, other));
                 break;
         }
-    }
-
-    private void OnTriggerExit (Collider other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-            containsEnemy = false;
     }
 
     IEnumerator Cooldown (float time)
@@ -96,7 +78,7 @@ public class Projectile : MonoBehaviour
 
     IEnumerator FireWallDamage (float time, Collider enemy)
     {
-        enemy.gameObject.GetComponent<Enemy> ().TakeDamage (p_amount);
+        enemy.gameObject.GetComponent<Enemy> ().TakeDamage (ability.HealthAmount);
         yield return new WaitForSeconds (time);
     }
 }

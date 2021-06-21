@@ -77,7 +77,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 30
   speed: 15
-  p_amount: 0
+  ability: {fileID: 11400000, guid: 6ac6870918008f14a911c578a6e5ec4b, type: 2}
+  containsEnemy: 0
   projectileTypes: 1
 --- !u!1 &8911064023898441021
 GameObject:
