@@ -60,12 +60,11 @@ public class Projectile : MonoBehaviour
         switch (projectileTypes)
         {
             case ProjectileType.FireWall:
-                /* (other.gameObject.CompareTag ("Enemy"))
+                if (other.gameObject.CompareTag ("Enemy"))
                 {
-                    StartCoroutine (FireWallDamage (2f, other));
-                }*/
-                while (other.gameObject.CompareTag ("Enemy"))
-                    StartCoroutine (FireWallDamage (2f, other));
+                    StartCoroutine (FireWallDamage (2, other));
+                }
+
                 break;
         }
     }
@@ -76,9 +75,9 @@ public class Projectile : MonoBehaviour
         hasMoved = true;
     }
 
-    IEnumerator FireWallDamage (float time, Collider enemy)
+    IEnumerator FireWallDamage (int time, Collider enemy)
     {
-        enemy.gameObject.GetComponent<Enemy> ().TakeDamage (ability.HealthAmount);
         yield return new WaitForSeconds (time);
+        enemy.gameObject.GetComponent<Enemy> ().TakeDamage (ability.HealthAmount);
     }
 }

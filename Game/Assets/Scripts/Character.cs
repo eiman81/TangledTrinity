@@ -6,6 +6,8 @@ public class Character : MonoBehaviour
 
     public float currentHealth;
 
+    private bool trigger = false;
+
     public void TakeDamage (float amount)
     {
         currentHealth -= amount;
@@ -18,7 +20,12 @@ public class Character : MonoBehaviour
 
     public void Die ()
     {
-        Instantiate (DeathEffect, transform.position, Quaternion.identity);
-        gameObject.SetActive (false);
+        if (!trigger)
+        {
+            Instantiate (DeathEffect, transform.position, Quaternion.identity);
+            trigger = true;
+            gameObject.SetActive (false);
+        }
     }
+        
 }
