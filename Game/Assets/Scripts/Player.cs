@@ -8,8 +8,6 @@ public class Player : Character
 
     public Ability[] ability;
 
-    public GameObject fireball;
-
     private void Awake ()
     {
         currentHealth = stats.health;
@@ -21,7 +19,7 @@ public class Player : Character
     {
         ability[0].Use ();
         ability[1].Use ();
-        //ability[2].Use ();
+        ability[2].Use ();
     }
 
     void FixedUpdate ()

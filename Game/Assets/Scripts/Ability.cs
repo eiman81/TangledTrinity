@@ -3,8 +3,10 @@
 public class Ability : ScriptableObject
 {
     // Ability properties
-    public int amount;
+    public int HealthAmount;
     public float coolDown;
+    public GameObject effect;
+    [HideInInspector]
     public float x;
     
     // Reference a character's stats so we can access properties such as health

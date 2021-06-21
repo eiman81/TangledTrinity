@@ -12,7 +12,7 @@ public class Heal : Ability
             if (x == 0)
             {
                 // Create heal effect
-                player.currentHealth += amount;
+                player.currentHealth += HealthAmount;
 
                 if (player.currentHealth > player.stats.health)
                     player.currentHealth = player.stats.health;

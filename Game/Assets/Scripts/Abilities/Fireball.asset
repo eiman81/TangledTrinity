@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1838398c7886b694bb6234cf90d8915b, type: 3}
   m_Name: Fireball
   m_EditorClassIdentifier: 
-  amount: 10
+  HealthAmount: 10
   coolDown: 1
+  effect: {fileID: 5044976265549041901, guid: 9967dd866ea92f04e82d3addaf0262b0, type: 3}
+  x: 0
   player: {fileID: 0}
-  stats: {fileID: 0}

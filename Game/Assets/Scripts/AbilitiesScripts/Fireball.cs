@@ -3,8 +3,7 @@
 [CreateAssetMenu (fileName = "Fireball", menuName = "Ability/Fireball")]
 public class Fireball : Ability
 {
-    // Reference where an ability projectile should spawn (right in front of the player)
-    GameObject projectile;
+    // Reference where an ability projectile should spawn (GameObject "end" is right in front of the player)
     GameObject end;
 
     public override void Use ()
@@ -16,12 +15,11 @@ public class Fireball : Ability
             if (x == 0f)
             {
                 // Create fireball effect
-                projectile = player.fireball;
                 end = GameObject.Find ("End");
 
                 GameObject projectileInstance;
-                projectileInstance = Instantiate (projectile, end.transform.position, Quaternion.identity);
-                projectileInstance.GetComponent<Projectile> ().p_amount = amount;
+                projectileInstance = Instantiate (effect, end.transform.position, Quaternion.identity);
+                projectileInstance.GetComponent<Projectile> ().p_amount = HealthAmount;
 
                 x = coolDown;
             }
