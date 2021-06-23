@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthAmount: 10
   coolDown: 1
-  effect: {fileID: 5044976265549041901, guid: 9967dd866ea92f04e82d3addaf0262b0, type: 3}
-  x: 0
+  effect: {fileID: 6157686942488156964, guid: b1b0d512965cf7140b05a6fbbf0a8aac, type: 3}
+  x: 0.4829906
   player: {fileID: 0}

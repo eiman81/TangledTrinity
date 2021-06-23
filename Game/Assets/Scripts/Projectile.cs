@@ -13,13 +13,15 @@ public class Projectile : MonoBehaviour
     GameObject player;
 
     bool hasMoved = false;
+    bool onFire = false;
+    Collider enemy;
 
     public enum ProjectileType { Fireball, FireWall };
     public ProjectileType projectileTypes;
 
-    private void Awake ()
+    private void Awake()
     {
-        player = GameObject.FindWithTag ("Player");
+        player = GameObject.FindWithTag("Player");
         direction = player.transform.forward;
     }
 
@@ -33,13 +35,18 @@ public class Projectile : MonoBehaviour
             case ProjectileType.FireWall:
                 if (!hasMoved)
                 {
-                    transform.Translate (direction * Time.deltaTime * 5f);
-                    StartCoroutine (Cooldown (1.2f));
+                    transform.Translate(direction * Time.deltaTime * 5f);
+                    StartCoroutine(Cooldown(1.2f));
                 }
                 break;
         }
+        if (onFire)
+        {
+            StartCoroutine(FireWallDamage(1f, enemy));
+            onFire = false;
+        }
 
-        Destroy (gameObject, destroyTime);
+        Destroy(gameObject, destroyTime);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -47,37 +54,37 @@ public class Projectile : MonoBehaviour
         switch (projectileTypes)
         {
             case ProjectileType.Fireball:
-                if (other.gameObject.CompareTag ("Enemy"))
-                    other.gameObject.GetComponent<Enemy> ().TakeDamage (ability.HealthAmount);
-                Destroy (gameObject);
-                
+                if (other.gameObject.CompareTag("Enemy"))
+                    other.gameObject.GetComponent<Enemy>().TakeDamage(ability.HealthAmount);
+                Destroy(gameObject);
                 break;
-        }
-    }
 
-    private void OnTriggerStay (Collider other)
-    {
-        switch (projectileTypes)
-        {
             case ProjectileType.FireWall:
-                if (other.gameObject.CompareTag ("Enemy"))
+                if (other.gameObject.CompareTag("Enemy"))
                 {
-                    StartCoroutine (FireWallDamage (2, other));
+                    onFire = true;
+                    enemy = other;
                 }
-
                 break;
         }
     }
 
-    IEnumerator Cooldown (float time)
+    private void OnTriggerExit(Collider other)
     {
-        yield return new WaitForSeconds (time);
-        hasMoved = true;
+        if (other.gameObject.CompareTag("Enemy"))
+            onFire = false;
     }
 
-    IEnumerator FireWallDamage (int time, Collider enemy)
+    IEnumerator FireWallDamage (float time, Collider enemy)
     {
-        yield return new WaitForSeconds (time);
-        enemy.gameObject.GetComponent<Enemy> ().TakeDamage (ability.HealthAmount);
+        enemy.gameObject.GetComponent<Enemy>().TakeDamage(ability.HealthAmount);
+        yield return new WaitForSeconds(time);
+        onFire = true;
+    }
+
+    IEnumerator Cooldown(float time)
+    {
+        yield return new WaitForSeconds(time);
+        hasMoved = true;
     }
 }
