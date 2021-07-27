@@ -10,6 +10,7 @@ public class Fireball : Ability
     {
         base.Use ();
 
+        // When player presses "1" shoot fireball
         if (Input.GetKeyDown (KeyCode.Alpha1))
         {
             if (x == 0f)
