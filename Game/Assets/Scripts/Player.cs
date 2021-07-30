@@ -2,14 +2,17 @@
 
 public class Player : Character
 {
+   // Animator PlayerMovementAnimator;
+
     private float Speed;
 
     public PlayerStats stats;
 
     public Ability[] ability;
 
-    private void Awake ()
+     void Awake ()
     {
+      //  PlayerMovementAnimator = GetComponent<Animator>();
         currentHealth = stats.health;
         ability = stats.abilities;
         Speed = stats.speed;
@@ -25,6 +28,9 @@ public class Player : Character
     void FixedUpdate ()
     {
         PlayerMove ();
+       /* if (Input.GetKey("w")) {
+            PlayerMovementAnimator.SetBool("isWalking", true);
+        }*/
     }
 
     void PlayerMove ()
