@@ -2,7 +2,9 @@
 
 public class Player : Character
 {
-   // Animator PlayerMovementAnimator;
+    //Animator PlayerMovementAnimator;
+
+    //private Rigidbody rb;
 
     private float Speed;
 
@@ -12,7 +14,8 @@ public class Player : Character
 
      void Awake ()
     {
-      //  PlayerMovementAnimator = GetComponent<Animator>();
+       //PlayerMovementAnimator = GetComponent<Animator>();
+        //rb = GetComponent<Rigidbody>();
         currentHealth = stats.health;
         ability = stats.abilities;
         Speed = stats.speed;
@@ -25,10 +28,11 @@ public class Player : Character
         ability[2].Use ();
     }
 
-    void FixedUpdate ()
+    void FixedUpdate()
     {
-        PlayerMove ();
-       /* if (Input.GetKey("w")) {
+        PlayerMove();
+      /*  if (rb.velocity
+            != 0;) {
             PlayerMovementAnimator.SetBool("isWalking", true);
         }*/
     }
