@@ -22,7 +22,7 @@ public class Projectile : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindWithTag("Player");
-        direction = player.transform.forward;
+        direction = -player.transform.forward;
     }
 
     void Update()
@@ -30,7 +30,7 @@ public class Projectile : MonoBehaviour
         switch (projectileTypes)
         {
             case ProjectileType.Fireball:
-                transform.position -= (direction * speed * Time.deltaTime);
+                transform.position = (direction * speed * Time.deltaTime);
                 break;
             case ProjectileType.FireWall:
                 if (!hasMoved)

@@ -4,16 +4,13 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public Image healthBar;
-    public Text ab1, ab2, ab3;
+    public Text ab1, ab2, ab3, EnemiesRemaining;
 
     Player player;
 
     float startHealth;
 
-    public GameObject cam;
-
-    public GameObject player1;
-    public GameObject spawnPoint;
+    public GameObject cam, player1, spawnPoint, Enemies;
 
     private void Awake ()
     {
@@ -33,5 +30,7 @@ public class GameManager : MonoBehaviour
         ab1.text = Mathf.RoundToInt(player.GetComponent<Player> ().ability[0].x).ToString ();
         ab2.text = Mathf.RoundToInt(player.GetComponent<Player> ().ability[1].x).ToString ();
         ab3.text = Mathf.RoundToInt(player.GetComponent<Player> ().ability[2].x).ToString ();
+
+        EnemiesRemaining.text = "Enemies Remaining: " + Enemies.transform.childCount.ToString ();
     }
 }
