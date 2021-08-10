@@ -234,7 +234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Age: '
+  m_text: 'Age: 17'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -850,7 +850,7 @@ RectTransform:
   m_Children:
   - {fileID: 4993502893723910782}
   m_Father: {fileID: 3163035440322823262}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1636,19 +1636,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2957556689567440648}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1914284808169720128}
   - {fileID: 229123828229319828}
   - {fileID: 6171708314322863681}
-  m_Father: {fileID: 3163035440322823262}
+  m_Father: {fileID: 7529105517285351230}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -80}
+  m_AnchoredPosition: {x: 88.2, y: 2.9}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4107123974002847862
@@ -1744,8 +1744,8 @@ RectTransform:
   m_Father: {fileID: 8692584545608129421}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5134344}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1815,12 +1815,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3163035440322823262}
-  m_RootOrder: 5
+  m_Father: {fileID: 7529105517285351230}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -168.8, y: -81.899994}
+  m_AnchoredPosition: {x: -80.600044, y: 1}
   m_SizeDelta: {x: 61.285, y: -75.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6239498778235382953
@@ -1873,7 +1873,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -1887,7 +1887,7 @@ MonoBehaviour:
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
-  m_textAlignment: 257
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -2083,10 +2083,8 @@ RectTransform:
   m_Children:
   - {fileID: 6581043437644224812}
   - {fileID: 4186516683138287618}
-  - {fileID: 1376700709425577589}
   - {fileID: 2512873907201037258}
   - {fileID: 8545600769590591140}
-  - {fileID: 5917340891077220626}
   m_Father: {fileID: 5193437932739910995}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2159,20 +2157,44 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Hello my name is Cole. Hello my name is Cole. Hello my name is Cole. Hello
-    my name is Cole. Hello my name is Cole. Hello my name is Cole. Hello my name
-    is Cole. Hello my name is Cole. Hello my name is Cole. Hello my name is Cole.
-    Hello my name is Cole. Hello my name is Cole. Hello my name is Cole. Hello my
-    name is Cole. Hello my name is Cole. Hello my name is Cole. Hello my name is
-    Cole. Hello my name is Cole. Hello my name is Cole. Hello my name is Cole. Hello
-    my name is Cole. Hello my name is Cole. Hello my name is Cole. Hello my name
-    is Cole. Hello my name is Cole. Hello my name is Cole. Hello my name is Cole.
-    Hello my name is Cole. Hello my name is Cole. Hello my name is Cole. Hello my
-    name is Cole. Hello my name is Cole. Hello my name is Cole. Hello my name is
-    Cole. Hello my name is Cole. Hello my name is Cole. Hello my name is Cole. Hello
-    my name is Cole. Hello my name is Cole. Hello my name is Cole. Hello my name
-    is Cole. Hello my name is Cole. Hello my name is Cole. Hello my name is Cole.
-    Hello my name is Cole. Hello my name is Cole. Hello my name is Cole. '
+  m_text: "Losing his parents at a young age, Cole was living on his own for a long
+    time since. He came from a small village close to a mysterious jungle, where
+    no one was allowed to step in. In all his free time he looked for ways to just
+    go into the jungle once. He was a weird kid, always had severe fevers to the
+    point that if you touched him your hand would burn, the village knew this was
+    normal now. Just like his high temperature condition, he was also hot tempered
+    and would get angry at every small thing. Cole was weirdly strong for his age
+    too and had an excellent balance he used to show off in school talent shows by
+    running along a tightrope, well more like a string because it was actually hard
+    to see. It was surprising how the string didn\u2019t break, almost as if Cole
+    was weightless. The only way village doctors could reason Cole\u2019s condition
+    was by stating that all this was because of a sudden mutation of the hypothalamus
+    gland (a gland controlling body temperature and appetite) at birth, however that
+    didn\u2019t explain a lot of stuff happening to him on a daily basis, and one
+    of the biggest mysteries of the village; Cole\u2019s parents disappeared shortly
+    after his birth, they didn\u2019t leave the hospital from any exit, it\u2019s
+    like they disappeared into thin air, \u201Cor maybe Cole ate them!\u201D said
+    the doctor jokingly. Cole didn\u2019t see any future in the village, he was just
+    going to be mocked forever if he stayed, his potential would be wasted. What
+    potential, heating up, walking on a line, pull ups? He thought to himself, but
+    his decision was made up, he was going to that forest even if it meant death,
+    he knew he was more capable than every single person in that village to handle
+    anything. He stormed towards the guards protecting the jungle (the only exit
+    from the village), he couldn\u2019t control his anger, shaking and stumbling
+    he felt heat coming straight from his palms. He tunnel visioned he could only
+    see his palms until he made a horrible mistake. As soon as he lifted his palms
+    to look at them, he felt burning like never before and passed out right in front
+    of the guards. His hopes and dreams of finally getting out of this village and
+    exploring the world was ruined or was it? The villagers tied him down and put
+    sticks on him and put it on fire, however he didn\u2019t die and suddenly the
+    mountain of sticks exploded and there he came right out of the glowing blaze
+    walking slowly but with determination. Everyone was shocked, the fire had been
+    going for 5 minutes. How was this kid still in one piece looking stronger and
+    feeling more alive than ever? He picked up everything he needed from the village
+    and made his way to the forest, this time no one stood in his way. There was
+    now a burnt spot on one of his eyes, a spot that would always remind him to only
+    listen to his heart and nobody else. A scar that would lead him on the journey
+    to save the world and a twisted fate: The tangled trinity."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2539,7 +2561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5193437932093215589
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4304,8 +4326,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5521374307796847445}
   m_HandleRect: {fileID: 8653529904637666981}
   m_Direction: 2
-  m_Value: 1.0000001
-  m_Size: 0.48656565
+  m_Value: 1
+  m_Size: 0.4865656
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4445,6 +4467,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3086665292459562089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6586381681979140110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb68156a8d04fbb4293aba7da9530ab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: e040318b33b718d47afcc6b5e14f1672, type: 2}
 --- !u!1 &6627662508143451963
 GameObject:
   m_ObjectHideFlags: 0
@@ -4531,7 +4566,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -4543,9 +4578,9 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 514
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -4768,7 +4803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2459732160222795268
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4782,7 +4817,7 @@ RectTransform:
   m_Children:
   - {fileID: 6860678423304807545}
   - {fileID: 2145693693247042219}
-  - {fileID: 5473664272967532914}
+  - {fileID: 5777088709928284852}
   - {fileID: 5473664272880723860}
   - {fileID: 5473664272622848892}
   - {fileID: 714493092}
@@ -4810,10 +4845,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Models:
-  - {fileID: 5473664272967532809}
+  - {fileID: 6586381681979140110}
   - {fileID: 5473664272880723951}
   - {fileID: 5473664272622848775}
   nameText: {fileID: 7135625436231940657}
+  descText: {fileID: 5952627626730534967}
+  ageText: {fileID: 1451715703}
   rotateSpeed: 40
   modelindex: 1
 --- !u!1 &7370073368609272389
@@ -5218,6 +5255,8 @@ RectTransform:
   m_Children:
   - {fileID: 4714642997715219946}
   - {fileID: 2460859907629741412}
+  - {fileID: 1376700709425577589}
+  - {fileID: 5917340891077220626}
   m_Father: {fileID: 5193437932739910995}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5313,7 +5352,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -5327,7 +5366,7 @@ MonoBehaviour:
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
-  m_textAlignment: 257
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -5866,7 +5905,7 @@ RectTransform:
   m_Children:
   - {fileID: 3758775557672821039}
   m_Father: {fileID: 3163035440322823262}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6045,87 +6084,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5193437932666736425}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &5193437933118728655
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2459732160222795268}
-    m_Modifications:
-    - target: {fileID: 280508434844919997, guid: 301644e380e77f8479a49bf0056f693e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 280508434844919997, guid: 301644e380e77f8479a49bf0056f693e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 37
-      objectReference: {fileID: 0}
-    - target: {fileID: 280508434844919997, guid: 301644e380e77f8479a49bf0056f693e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -9.512061
-      objectReference: {fileID: 0}
-    - target: {fileID: 280508434844919997, guid: 301644e380e77f8479a49bf0056f693e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 468.65912
-      objectReference: {fileID: 0}
-    - target: {fileID: 280508434844919997, guid: 301644e380e77f8479a49bf0056f693e,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.97619224
-      objectReference: {fileID: 0}
-    - target: {fileID: 280508434844919997, guid: 301644e380e77f8479a49bf0056f693e,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.21690708
-      objectReference: {fileID: 0}
-    - target: {fileID: 280508434844919997, guid: 301644e380e77f8479a49bf0056f693e,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 280508434844919997, guid: 301644e380e77f8479a49bf0056f693e,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 280508434844919997, guid: 301644e380e77f8479a49bf0056f693e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -25.055
-      objectReference: {fileID: 0}
-    - target: {fileID: 280508434844919997, guid: 301644e380e77f8479a49bf0056f693e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 280508434844919997, guid: 301644e380e77f8479a49bf0056f693e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 280508434844920006, guid: 301644e380e77f8479a49bf0056f693e,
-        type: 3}
-      propertyPath: m_Name
-      value: Cole
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 301644e380e77f8479a49bf0056f693e, type: 3}
---- !u!1 &5473664272967532809 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 280508434844920006, guid: 301644e380e77f8479a49bf0056f693e,
-    type: 3}
-  m_PrefabInstance: {fileID: 5193437933118728655}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5473664272967532914 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 280508434844919997, guid: 301644e380e77f8479a49bf0056f693e,
-    type: 3}
-  m_PrefabInstance: {fileID: 5193437933118728655}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5193437933444539329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6206,4 +6164,105 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 280508434844919997, guid: 6ae3d5a3e1c0ec142a426439bd23df86,
     type: 3}
   m_PrefabInstance: {fileID: 5193437933444539329}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6315998240811291999
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2459732160222795268}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ba38963fea930274c87a655b40909820,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba38963fea930274c87a655b40909820,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba38963fea930274c87a655b40909820,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba38963fea930274c87a655b40909820,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba38963fea930274c87a655b40909820,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 61.778744
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba38963fea930274c87a655b40909820,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -138.03847
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba38963fea930274c87a655b40909820,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 535.1658
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba38963fea930274c87a655b40909820,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.20212491
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba38963fea930274c87a655b40909820,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.013576878
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba38963fea930274c87a655b40909820,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9679927
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba38963fea930274c87a655b40909820,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.14815956
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba38963fea930274c87a655b40909820,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 16.341002
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba38963fea930274c87a655b40909820,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 155.671
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba38963fea930274c87a655b40909820,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -5.1520004
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ba38963fea930274c87a655b40909820,
+        type: 3}
+      propertyPath: m_Name
+      value: Cole
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ba38963fea930274c87a655b40909820,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba38963fea930274c87a655b40909820, type: 3}
+--- !u!4 &5777088709928284852 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ba38963fea930274c87a655b40909820,
+    type: 3}
+  m_PrefabInstance: {fileID: 6315998240811291999}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6586381681979140110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ba38963fea930274c87a655b40909820,
+    type: 3}
+  m_PrefabInstance: {fileID: 6315998240811291999}
   m_PrefabAsset: {fileID: 0}

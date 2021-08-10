@@ -5,6 +5,7 @@ public class Heal : Ability
 {
     public override void Use ()
     {
+        // Reference the base function so we can automatically get a reference to the player
         base.Use ();
 
         if (Input.GetKeyDown (KeyCode.Alpha2))
@@ -17,6 +18,7 @@ public class Heal : Ability
                 if (player.currentHealth > player.stats.health)
                     player.currentHealth = player.stats.health;
 
+                // Begin the cooldown
                 x = coolDown;
             }
         }

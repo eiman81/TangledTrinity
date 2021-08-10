@@ -9,6 +9,7 @@ public class Fireball : Ability
 
     public override void Use ()
     {
+        // Reference the base function so we can automatically get a reference to the player
         base.Use ();
 
         // When player presses "1" shoot fireball
@@ -23,6 +24,7 @@ public class Fireball : Ability
                 //projectileInstance = Instantiate (effect, end.position, Quaternion.identity);
                 Instantiate (effect, end.position, Quaternion.identity);
 
+                // Begin the cooldown
                 x = coolDown;
             }
         }

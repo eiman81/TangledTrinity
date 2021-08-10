@@ -213,6 +213,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1526987110 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5952627626730534967, guid: 2dbade9dffcc82743b092bd32785f405,
+    type: 3}
+  m_PrefabInstance: {fileID: 5193437933984237029}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1573413670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -293,6 +305,7 @@ GameObject:
   - component: {fileID: 1956731047}
   - component: {fileID: 1956731046}
   - component: {fileID: 1956731045}
+  - component: {fileID: 1956731048}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -365,6 +378,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1956731048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956731044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1001 &5193437933984237029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -372,10 +416,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4634463670888126621, guid: 2dbade9dffcc82743b092bd32785f405,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -193.71214
+      objectReference: {fileID: 0}
     - target: {fileID: 5193437932093215642, guid: 2dbade9dffcc82743b092bd32785f405,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5193437933020377368, guid: 2dbade9dffcc82743b092bd32785f405,
         type: 3}
@@ -442,10 +491,93 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5473664272967532813, guid: 2dbade9dffcc82743b092bd32785f405,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952627626730534967, guid: 2dbade9dffcc82743b092bd32785f405,
+        type: 3}
+      propertyPath: m_text
+      value: "Losing his parents at a young age, Cole was living on his own for a
+        long time since. He came from a small village close to a mysterious jungle,
+        where no one was allowed to step in. In all his free time he looked for ways
+        to just go into the jungle once. He was a weird kid, always had severe fevers
+        to the point that if you touched him your hand would burn, the village knew
+        this was normal now. Just like his high temperature condition, he was also
+        hot tempered and would get angry at every small thing. Cole was weirdly strong
+        for his age too and had an excellent balance he used to show off in school
+        talent shows by running along a tightrope, well more like a string because
+        it was actually hard to see. It was surprising how the string didn\u2019t
+        break, almost as if Cole was weightless. The only way village doctors could
+        reason Cole\u2019s condition was by stating that all this was because of
+        a sudden mutation of the hypothalamus gland (a gland controlling body temperature
+        and appetite) at birth, however that didn\u2019t explain a lot of stuff happening
+        to him on a daily basis, and one of the biggest mysteries of the village;
+        Cole\u2019s parents disappeared shortly after his birth, they didn\u2019t
+        leave the hospital from any exit, it\u2019s like they disappeared into thin
+        air, \u201Cor maybe Cole ate them!\u201D said the doctor jokingly. Cole didn\u2019t
+        see any future in the village, he was just going to be mocked forever if
+        he stayed, his potential would be wasted. What potential, heating up, walking
+        on a line, pull ups? He thought to himself, but his decision was made up,
+        he was going to that forest even if it meant death, he knew he was more capable
+        than every single person in that village to handle anything. He stormed towards
+        the guards protecting the jungle (the only exit from the village), he couldn\u2019t
+        control his anger, shaking and stumbling he felt heat coming straight from
+        his palms. He tunnel visioned he could only see his palms until he made a
+        horrible mistake. As soon as he lifted his palms to look at them, he felt
+        burning like never before and passed out right in front of the guards. His
+        hopes and dreams of finally getting out of this village and exploring the
+        world was ruined or was it? The villagers tied him down and put sticks on
+        him and put it on fire, however he didn\u2019t die and suddenly the mountain
+        of sticks exploded and there he came right out of the glowing blaze walking
+        slowly but with determination. Everyone was shocked, the fire had been going
+        for 5 minutes. How was this kid still in one piece looking stronger and feeling
+        more alive than ever? He picked up everything he needed from the village
+        and made his way to the forest, this time no one stood in his way. There
+        was now a burnt spot on one of his eyes, a spot that would always remind
+        him to only listen to his heart and nobody else. A scar that would lead him
+        on the journey to save the world and a twisted fate: The tangled trinity."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6288390805386720953, guid: 2dbade9dffcc82743b092bd32785f405,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6288390805386720953, guid: 2dbade9dffcc82743b092bd32785f405,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6288390805386720953, guid: 2dbade9dffcc82743b092bd32785f405,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7216446865567756137, guid: 2dbade9dffcc82743b092bd32785f405,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341522561394453097, guid: 2dbade9dffcc82743b092bd32785f405,
+        type: 3}
+      propertyPath: descText
+      value: 
+      objectReference: {fileID: 1526987110}
+    - target: {fileID: 7841997528555637811, guid: 2dbade9dffcc82743b092bd32785f405,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380459978587899619, guid: 2dbade9dffcc82743b092bd32785f405,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380459978587899619, guid: 2dbade9dffcc82743b092bd32785f405,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8653529904637666981, guid: 2dbade9dffcc82743b092bd32785f405,
         type: 3}

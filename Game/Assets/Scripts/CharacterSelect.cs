@@ -7,7 +7,7 @@ public class CharacterSelect : MonoBehaviour
 {
     public List<GameObject> Models;
 
-    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI nameText, descText, ageText;
 
     public float rotateSpeed;
 
@@ -28,7 +28,10 @@ public class CharacterSelect : MonoBehaviour
         if (Models.Count > 0)
         {
             Models[modelindex].SetActive (true);
+            ageText.text = "Age: " + Models[modelindex].GetComponent<StatsDisplay> ().stats.age.ToString();
             nameText.text = Models[modelindex].GetComponent<StatsDisplay> ().stats.name;
+            descText.text = Models[modelindex].GetComponent<StatsDisplay> ().stats.description;
+
             modelindex++;
         }
     }

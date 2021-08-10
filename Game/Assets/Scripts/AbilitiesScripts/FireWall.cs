@@ -8,8 +8,10 @@ public class FireWall : Ability
 
     public override void Use ()
     {
+        // Reference the base function so we can automatically get a reference to the player
         base.Use ();
 
+        //
         if (Input.GetKeyDown (KeyCode.Alpha3))
         {
             if (x == 0f)
@@ -20,6 +22,7 @@ public class FireWall : Ability
                 GameObject projectileInstance;
                 projectileInstance = Instantiate (effect, player.transform.position, effect.transform.rotation);
 
+                // Begin the cooldown
                 x = coolDown;
             }
         }

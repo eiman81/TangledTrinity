@@ -4,9 +4,11 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
+    // Reference the pause menu and the sensitivity slider so we can access their properties
     public GameObject pauseMenu;
     public Slider sensitivity;
 
+    // Enable a one-time tutorial
     public bool TutorialDone = false;
 
     [HideInInspector]
@@ -15,7 +17,7 @@ public class MenuManager : MonoBehaviour
     private void Awake ()
     {
         DontDestroyOnLoad (this);
-        Resume (); // comment this
+        //Resume (); // comment this
     }
 
     private void Update ()
@@ -31,17 +33,20 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    // Play the game by getting the next scene after the Menu
     public void PlayGame ()
     {
         if (SceneManager.GetActiveScene ().name == "Menu")
             SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
     }
 
+    // Quit game
     public void QuitGame ()
     {
         Application.Quit ();
     }
 
+    // The player can pause the game whilst ingame if the menu is not currently open and they have finished the tutorial menu screen
     private void PauseGame ()
     {
         if (SceneManager.GetActiveScene().name != "Menu" && TutorialDone)

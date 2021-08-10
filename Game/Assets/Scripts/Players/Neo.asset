@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: Neo
   m_EditorClassIdentifier: 
   playerName: Neo Callisto
-  description: 'Menacing eyes- Unsettlingly calm personality- Power hungry highly
-    determined to achieve whatever he wants getting through anything or anyone in
-    his path- lurks in the shadows-  '
+  description: Released soon!
   age: 18
   speed: 8
   health: 100
