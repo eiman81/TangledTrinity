@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.AI;
 
 public class Enemy : Character
@@ -82,8 +83,7 @@ public class Enemy : Character
             // Play the player attack animation
             anim.SetTrigger ("attacking");
 
-            // Deal damage to the player
-            target.gameObject.GetComponent<Player> ().TakeDamage (attackDamage);
+            StartCoroutine (AttackDelay ());
 
             // Reset the attack cooldown
             x = coolDown;
@@ -113,5 +113,14 @@ public class Enemy : Character
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere (transform.position, lookRadius);
+    }
+
+    IEnumerator AttackDelay ()
+    {
+        // Wait a small delay so the player takes damage in sync with the attack animation
+        yield return new WaitForSeconds (0.4f);
+
+        // Deal damage to the player
+        target.gameObject.GetComponent<Player> ().TakeDamage (attackDamage);
     }
 }

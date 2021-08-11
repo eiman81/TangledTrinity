@@ -14,11 +14,12 @@ public class MenuManager : MonoBehaviour
     [HideInInspector]
     public bool isPaused = false;
 
+    [HideInInspector]
+    public bool canPause = true;
+
     private void Awake ()
     {
         DontDestroyOnLoad (this);
-
-        //Resume (); // comment this
     }
 
     private void Update ()
@@ -56,7 +57,7 @@ public class MenuManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name != "Menu" && TutorialDone)
         {
-            if (Input.GetKeyDown (KeyCode.Escape))
+            if (Input.GetKeyDown (KeyCode.Escape) && canPause)
             {
                 if (isPaused)
                     Resume ();

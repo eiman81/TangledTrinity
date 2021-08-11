@@ -14,11 +14,14 @@ public class GameManager : MonoBehaviour
     // Reference the camera, player, spawn point, the enemies, and the game over menu to display when the player dies
     public GameObject cam, player1, spawnPoint, Enemies, GameOverMenu;
 
+    private GameObject UI;
+
     private void Awake ()
     {
         // Create the player at the spawn point when the game starts
         Instantiate (player1, spawnPoint.transform.position, player1.transform.rotation);
         player = GameObject.FindWithTag ("Player").GetComponent<Player> ();
+        UI = GameObject.Find ("UI");
     }
 
     void Update()
@@ -29,6 +32,10 @@ public class GameManager : MonoBehaviour
         // If the player's health is less than or equal to 0, they die, enabling a "game over" camera
         if (player.currentHealth <= 0)
         {
+            UI.GetComponent<MenuManager> ().canPause = false;
+            Time.timeScale = 0f;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             cam.SetActive (true);
             GameOverMenu.SetActive (true);
         }
