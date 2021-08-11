@@ -4,6 +4,7 @@ public class Player : Character
 {
     Animator anim;
 
+    [SerializeField]
     private float Speed;
 
     private bool isRunning = false;
@@ -12,6 +13,10 @@ public class Player : Character
 
     // Reference the array of abilities
     public Ability[] ability;
+
+    // Array of sound effects to be played for when the abilities are used
+    public AudioClip[] sounds;
+    public AudioSource source;
 
      void Awake ()
     {
@@ -51,18 +56,21 @@ public class Player : Character
             anim.SetBool ("isRunning", isRunning);
 
             if (Input.GetKey (KeyCode.LeftShift))
+            {
                 isRunning = true;
+                //Speed *= 1.5f;
+            }   
             else
+            {
                 isRunning = false;
+               //Speed /= 1.5f;
+            }         
 
             // Create a vector3 to store the new position of the player
             Vector3 movement = Quaternion.Euler (0, Camera.main.transform.eulerAngles.y, 0) * new Vector3 (0, 0, v * Speed * Time.deltaTime);
 
             // Add this vector3 to the player's position, to allow for him to move
             transform.position += movement;
-        }
-        else
-        {
         }
     }
 }

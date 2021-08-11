@@ -26,6 +26,10 @@ public class Fireball : Ability
                 // Play the player attack animation
                 player.GetComponent<Animator> ().SetTrigger ("attacking");
 
+                // Play a sound effect
+                player.source.clip = player.sounds[0];
+                player.source.Play ();
+
                 // Begin the cooldown
                 x = coolDown;
             }

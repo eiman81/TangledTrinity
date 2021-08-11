@@ -56,8 +56,11 @@ public class Enemy : Character
     // Face the player
     void FaceTarget ()
     {
+        // Get the direction of the player from the enemy
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation (new Vector3 (direction.x, 0, direction.y));
+
+        // Rotate the enemy towards the player
         transform.rotation = Quaternion.Slerp (transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
