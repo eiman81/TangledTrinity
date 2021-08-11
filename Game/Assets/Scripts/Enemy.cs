@@ -3,14 +3,26 @@ using UnityEngine.AI;
 
 public class Enemy : Character
 {
-    // The view distance of the enemies
-    public float lookRadius = 10f;
+    // The view and attack distance of the enemies
+    public float lookRadius, attackRadius;
 
     // Reference the target (the player) that the enemies will chase
     Transform target;
 
     // Reference the NavMeshAgent so the enemies can use AI to locate the player
     NavMeshAgent agent;
+
+    // Reference the animator
+    Animator anim;
+
+    // Attack cooldown
+    public float coolDown = 2f;
+    float x;
+
+    // Enemy attack damage
+    float attackDamage;
+
+    float distance;
 
     // An enum data type was used to categorise the types of enemies
     public enum EnemyType {Minion, Flyer, Boss};
@@ -22,17 +34,23 @@ public class Enemy : Character
         target = GameObject.FindWithTag ("Player").transform;
         agent = GetComponent<NavMeshAgent> ();
 
+        // Reference the animator
+        anim = GetComponent<Animator> ();
+
         // Set the health for each different type of enemy
         switch (enemyTypes)
         {
             case EnemyType.Minion:
                 currentHealth = 50;
+                attackDamage = 10;
                 break;
             case EnemyType.Flyer:
                 currentHealth = 30;
+                attackDamage = 5;
                 break;
             case EnemyType.Boss:
                 currentHealth = 70;
+                attackDamage = 15;
                 break;
         }
     }
@@ -40,7 +58,7 @@ public class Enemy : Character
     private void Update()
     {
         // If the player is within the look radius of the enemy, then go to the player and attack them
-        float distance = Vector3.Distance (target.position, transform.position);
+        distance = Vector3.Distance (target.position, transform.position);
 
         if (distance <= lookRadius)
         {
@@ -51,6 +69,32 @@ public class Enemy : Character
                 FaceTarget ();
             }
         }
+
+        Attack ();
+    }
+
+    private void Attack ()
+    {
+        // The enemy will attack if it is in reach of the player and the attack cooldown is 0
+        if (distance <= attackRadius && x == 0f)
+        {
+            FaceTarget ();
+            // Play the player attack animation
+            anim.SetTrigger ("attacking");
+
+            // Deal damage to the player
+            target.gameObject.GetComponent<Player> ().TakeDamage (attackDamage);
+
+            // Reset the attack cooldown
+            x = coolDown;
+        }
+
+        // Cooldown
+        if (x > 0)
+            x -= Time.deltaTime;
+
+        if (x < 0)
+            x = 0;
     }
 
     // Face the player

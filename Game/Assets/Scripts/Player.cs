@@ -59,12 +59,12 @@ public class Player : Character
             if (Input.GetKeyDown (KeyCode.LeftShift))
             {
                 isRunning = true;
-                Speed += 2f;
+                Speed = 12f;
             }
             if (Input.GetKeyUp (KeyCode.LeftShift))
             {
                 isRunning = false;
-                Speed -= 2f;
+                Speed = 8f;
             }
 
             // Create a vector3 to store the new position of the player

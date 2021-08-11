@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,8 +11,8 @@ public class GameManager : MonoBehaviour
     // Get a reference to the player
     Player player;
 
-    // Reference the camera, player, spawn point, and all of the enemies
-    public GameObject cam, player1, spawnPoint, Enemies;
+    // Reference the camera, player, spawn point, the enemies, and the game over menu to display when the player dies
+    public GameObject cam, player1, spawnPoint, Enemies, GameOverMenu;
 
     private void Awake ()
     {
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
         if (player.currentHealth <= 0)
         {
             cam.SetActive (true);
+            GameOverMenu.SetActive (true);
         }
 
         // Set the text of the UI elements to the actual cooldowns of the abilities
@@ -38,5 +40,11 @@ public class GameManager : MonoBehaviour
 
         // Get all of the enemies in the scene so we have an enemy counter in the UI
         EnemiesRemaining.text = "Enemies Remaining: " + Enemies.transform.childCount.ToString ();
+    }
+
+    // Restart the game, taking the player back to the main menu
+    public void RestartGame ()
+    {
+        SceneManager.LoadScene ("Menu");
     }
 }

@@ -112,6 +112,7 @@ MonoBehaviour:
     type: 3}
   currentHealth: 50
   lookRadius: 50
+  attackRadius: 5
   enemyTypes: 2
 --- !u!54 &4710671131509954563
 Rigidbody:
