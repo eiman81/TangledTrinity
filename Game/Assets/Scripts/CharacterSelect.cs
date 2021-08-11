@@ -13,6 +13,8 @@ public class CharacterSelect : MonoBehaviour
 
     public int modelindex;
 
+
+    // The method to cycle through the characters to select
     public void CycleModel ()
     {
         if (modelindex == Models.Count)
@@ -27,15 +29,20 @@ public class CharacterSelect : MonoBehaviour
 
         if (Models.Count > 0)
         {
+            // For the current active model in the cycle, set it to true so it can be displayed
             Models[modelindex].SetActive (true);
+
+            // Set the text (e.g. name, age, description) of the characters
             ageText.text = "Age: " + Models[modelindex].GetComponent<StatsDisplay> ().stats.age.ToString();
             nameText.text = Models[modelindex].GetComponent<StatsDisplay> ().stats.name;
             descText.text = Models[modelindex].GetComponent<StatsDisplay> ().stats.description;
 
+            // Increment the model index
             modelindex++;
         }
     }
 
+    // For all of the models, rotate them on their axis so they can be viewed in the character select
     private void Update ()
     {
         foreach (var model in Models)
