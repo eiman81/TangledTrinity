@@ -25,6 +25,7 @@ public class MenuManager : MonoBehaviour
         PauseGame ();
     }
 
+    // Change the camera's look sensitivity
     public void ChangeSenstivity(float newSensitivity)
     {
         if (SceneManager.GetActiveScene ().name != "Menu")
@@ -61,6 +62,7 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    // Resume the game, set the time back to normal, set the pause menu to inactive, lock the cursor
     public void Resume ()
     {
         pauseMenu.SetActive (false);
@@ -71,6 +73,7 @@ public class MenuManager : MonoBehaviour
         TutorialDone = true;
     }
 
+    // Pause the game, pausing all objects with the time scale = 0f, set the pause menu active, unlock the cursor
     public void Pause(GameObject menu)
     {
         menu.SetActive (true);

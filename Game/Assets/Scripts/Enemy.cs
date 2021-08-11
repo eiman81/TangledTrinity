@@ -3,18 +3,26 @@ using UnityEngine.AI;
 
 public class Enemy : Character
 {
+    // The view distance of the enemies
     public float lookRadius = 10f;
+
+    // Reference the target (the player) that the enemies will chase
     Transform target;
+
+    // Reference the NavMeshAgent so the enemies can use AI to locate the player
     NavMeshAgent agent;
 
+    // An enum data type was used to categorise the types of enemies
     public enum EnemyType {Minion, Flyer, Boss};
     public EnemyType enemyTypes;
 
     private void Start()
     {
+        // Find the player
         target = GameObject.FindWithTag ("Player").transform;
         agent = GetComponent<NavMeshAgent> ();
 
+        // Set the health for each different type of enemy
         switch (enemyTypes)
         {
             case EnemyType.Minion:
@@ -31,6 +39,7 @@ public class Enemy : Character
 
     private void Update()
     {
+        // If the player is within the look radius of the enemy, then go to the player and attack them
         float distance = Vector3.Distance (target.position, transform.position);
 
         if (distance <= lookRadius)
@@ -44,6 +53,7 @@ public class Enemy : Character
         }
     }
 
+    // Face the player
     void FaceTarget ()
     {
         Vector3 direction = (target.position - transform.position).normalized;
@@ -51,6 +61,7 @@ public class Enemy : Character
         transform.rotation = Quaternion.Slerp (transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
+    // This is just for the editor, so we can visualise the radius that the enemies can see the player. When you click on an enemy in the scene view, a wire sphere will show, revealing their look radius
     private void OnDrawGizmosSelected ()
     {
         Gizmos.color = Color.red;
