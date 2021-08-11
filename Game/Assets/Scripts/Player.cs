@@ -55,16 +55,17 @@ public class Player : Character
             anim.SetFloat ("speed", v);
             anim.SetBool ("isRunning", isRunning);
 
-            if (Input.GetKey (KeyCode.LeftShift))
+
+            if (Input.GetKeyDown (KeyCode.LeftShift))
             {
                 isRunning = true;
-                //Speed *= 1.5f;
-            }   
-            else
+                Speed += 2f;
+            }
+            if (Input.GetKeyUp (KeyCode.LeftShift))
             {
                 isRunning = false;
-               //Speed /= 1.5f;
-            }         
+                Speed -= 2f;
+            }
 
             // Create a vector3 to store the new position of the player
             Vector3 movement = Quaternion.Euler (0, Camera.main.transform.eulerAngles.y, 0) * new Vector3 (0, 0, v * Speed * Time.deltaTime);

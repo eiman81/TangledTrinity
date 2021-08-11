@@ -111,7 +111,7 @@ MonoBehaviour:
   DeathEffect: {fileID: 2991020044556363078, guid: d6a27aeffa9a6aa4291dec5109b024fc,
     type: 3}
   currentHealth: 50
-  lookRadius: 10
+  lookRadius: 30
   enemyTypes: 1
 --- !u!54 &6016445315571033583
 Rigidbody:
