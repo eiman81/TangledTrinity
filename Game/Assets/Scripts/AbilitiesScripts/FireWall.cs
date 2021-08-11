@@ -17,10 +17,13 @@ public class FireWall : Ability
             if (x == 0f)
             {
                 // Create fire wall effect
-                end = GameObject.Find ("End");
+                end = GameObject.Find ("End"); 
 
                 GameObject projectileInstance;
                 projectileInstance = Instantiate (effect, player.transform.position, effect.transform.rotation);
+
+                // Play the player attack animation
+                player.GetComponent<Animator> ().SetTrigger ("attacking");
 
                 // Begin the cooldown
                 x = coolDown;

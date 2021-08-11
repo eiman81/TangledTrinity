@@ -20,9 +20,11 @@ public class Fireball : Ability
                 // Create fireball effect
                 end = GameObject.Find ("End").transform;
 
-                //GameObject projectileInstance;
-                //projectileInstance = Instantiate (effect, end.position, Quaternion.identity);
+                GameObject projectileInstance = Instantiate (effect, end.position, Quaternion.identity);
                 Instantiate (effect, end.position, Quaternion.identity);
+
+                // Play the player attack animation
+                player.GetComponent<Animator> ().SetTrigger ("attacking");
 
                 // Begin the cooldown
                 x = coolDown;

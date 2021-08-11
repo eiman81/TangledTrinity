@@ -54,7 +54,7 @@ MonoBehaviour:
   age: 17
   speed: 8
   health: 80
-  playerPrefab: {fileID: 280508434844920006, guid: 301644e380e77f8479a49bf0056f693e,
+  playerPrefab: {fileID: 2261310472037950536, guid: 37734cbf5171b864197588b12bb209b4,
     type: 3}
   abilities:
   - {fileID: 11400000, guid: bcde21011d85b254b9b2514c54613453, type: 2}

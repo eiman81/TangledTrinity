@@ -6,6 +6,8 @@ public class Player : Character
 
     private float Speed;
 
+    private bool isRunning = false;
+
     public PlayerStats stats;
 
     // Reference the array of abilities
@@ -36,18 +38,31 @@ public class Player : Character
 
     void PlayerMove ()
     {
-        // "v" is equal to the vertical input axis which is the W, S, Up & down arrow keys. The player can walk forward and backward by pressing these keys
-        float v;
+        //if (!isAttacking)
+        if (!anim.GetCurrentAnimatorStateInfo (0).IsName ("Attack1"))
+        {
+            // "v" is equal to the vertical input axis which is the W, S, Up & down arrow keys. The player can walk forward and backward by pressing these keys
+            float v;
 
-        v = Input.GetAxis ("Vertical");
+            v = Input.GetAxis ("Vertical");
 
-        // Set the animation to run when the player is moving
-        anim.SetFloat ("speed", v);
+            // Set the animation to run when the player is moving
+            anim.SetFloat ("speed", v);
+            anim.SetBool ("isRunning", isRunning);
 
-        // Create a vector3 to store the new position of the player
-        Vector3 movement = Quaternion.Euler (0, Camera.main.transform.eulerAngles.y, 0) * new Vector3 (0, 0, v * Speed * Time.deltaTime);
+            if (Input.GetKey (KeyCode.LeftShift))
+                isRunning = true;
+            else
+                isRunning = false;
 
-        // Add this vector3 to the player's position, to allow for him to move
-        transform.position += movement;
+            // Create a vector3 to store the new position of the player
+            Vector3 movement = Quaternion.Euler (0, Camera.main.transform.eulerAngles.y, 0) * new Vector3 (0, 0, v * Speed * Time.deltaTime);
+
+            // Add this vector3 to the player's position, to allow for him to move
+            transform.position += movement;
+        }
+        else
+        {
+        }
     }
 }

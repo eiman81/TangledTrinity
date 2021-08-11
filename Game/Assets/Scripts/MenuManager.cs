@@ -17,7 +17,8 @@ public class MenuManager : MonoBehaviour
     private void Awake ()
     {
         DontDestroyOnLoad (this);
-        //Resume (); // comment this
+
+        Resume (); // comment this
     }
 
     private void Update ()
@@ -39,6 +40,9 @@ public class MenuManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene ().name == "Menu")
             SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Quit game
