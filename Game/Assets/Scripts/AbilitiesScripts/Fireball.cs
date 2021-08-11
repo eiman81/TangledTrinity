@@ -4,7 +4,6 @@
 public class Fireball : Ability
 {
     // Reference where an ability projectile should spawn (GameObject "end" is right in front of the player)
-    [SerializeField]
     Transform end;
 
     public override void Use ()
@@ -20,8 +19,8 @@ public class Fireball : Ability
                 // Create fireball effect
                 end = GameObject.Find ("End").transform;
 
-                GameObject projectileInstance = Instantiate (effect, end.position, Quaternion.identity);
-                Instantiate (effect, end.position, Quaternion.identity);
+                GameObject projectileInstance;
+                projectileInstance = Instantiate (effect, end.position, effect.transform.rotation);
 
                 // Play the player attack animation
                 player.GetComponent<Animator> ().SetTrigger ("attacking");

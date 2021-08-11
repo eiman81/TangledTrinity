@@ -26,7 +26,7 @@ public class Enemy : Character
     float distance;
 
     // An enum data type was used to categorise the types of enemies
-    public enum EnemyType {Minion, Flyer, Boss};
+    public enum EnemyType {Minion, Boss};
     public EnemyType enemyTypes;
 
     private void Start()
@@ -42,15 +42,11 @@ public class Enemy : Character
         switch (enemyTypes)
         {
             case EnemyType.Minion:
-                currentHealth = 50;
+                currentHealth = 60;
                 attackDamage = 10;
                 break;
-            case EnemyType.Flyer:
-                currentHealth = 30;
-                attackDamage = 5;
-                break;
             case EnemyType.Boss:
-                currentHealth = 70;
+                currentHealth = 80;
                 attackDamage = 15;
                 break;
         }
@@ -118,7 +114,7 @@ public class Enemy : Character
     IEnumerator AttackDelay ()
     {
         // Wait a small delay so the player takes damage in sync with the attack animation
-        yield return new WaitForSeconds (0.4f);
+        yield return new WaitForSeconds (0.6f);
 
         // Deal damage to the player
         target.gameObject.GetComponent<Player> ().TakeDamage (attackDamage);

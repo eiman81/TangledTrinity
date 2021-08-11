@@ -15,5 +15,5 @@ MonoBehaviour:
   HealthAmount: 10
   coolDown: 1
   effect: {fileID: 6157686942488156964, guid: b1b0d512965cf7140b05a6fbbf0a8aac, type: 3}
-  x: 0.4829906
+  x: 0
   player: {fileID: 0}

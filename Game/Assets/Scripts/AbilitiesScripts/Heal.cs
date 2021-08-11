@@ -8,6 +8,7 @@ public class Heal : Ability
         // Reference the base function so we can automatically get a reference to the player
         base.Use ();
 
+        // When player presses "2" heal the player
         if (Input.GetKeyDown (KeyCode.Alpha2))
         {
             if (x == 0)

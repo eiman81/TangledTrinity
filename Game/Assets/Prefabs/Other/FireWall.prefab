@@ -75,10 +75,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e9702f6d6bcab47a42b90ff59e353b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 30
+  destroyTime: 10
   speed: 15
   ability: {fileID: 11400000, guid: 6ac6870918008f14a911c578a6e5ec4b, type: 2}
-  containsEnemy: 0
   projectileTypes: 1
 --- !u!1 &8911064023898441021
 GameObject:

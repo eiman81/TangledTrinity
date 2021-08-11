@@ -37,7 +37,7 @@ public class Projectile : MonoBehaviour
         {
             // The fireball shoots off in the direction of the player
             case ProjectileType.Fireball:
-                transform.position = (direction * speed * Time.deltaTime);
+                transform.Translate (direction * Time.deltaTime * 5f);
                 break;
             case ProjectileType.FireWall:
                 if (!hasMoved)
@@ -64,8 +64,10 @@ public class Projectile : MonoBehaviour
         {
             case ProjectileType.Fireball:
                 if (other.gameObject.CompareTag("Enemy"))
-                    other.gameObject.GetComponent<Enemy>().TakeDamage(ability.HealthAmount);
-                Destroy(gameObject);
+                {
+                    other.gameObject.GetComponent<Enemy> ().TakeDamage (ability.HealthAmount);
+                    Destroy (gameObject);
+                }   
                 break;
 
             case ProjectileType.FireWall:

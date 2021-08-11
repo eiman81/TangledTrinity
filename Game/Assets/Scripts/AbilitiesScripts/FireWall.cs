@@ -4,23 +4,23 @@
 public class FireWall : Ability
 {
     // Reference where an ability projectile should spawn (GameObject "end" is right in front of the player)
-    GameObject end;
+    Transform end;
 
     public override void Use ()
     {
         // Reference the base function so we can automatically get a reference to the player
         base.Use ();
 
-        //
+        // When player presses "3" shoot firewall
         if (Input.GetKeyDown (KeyCode.Alpha3))
         {
             if (x == 0f)
             {
                 // Create fire wall effect
-                end = GameObject.Find ("End"); 
+                end = GameObject.Find ("End").transform; 
 
                 GameObject projectileInstance;
-                projectileInstance = Instantiate (effect, player.transform.position, effect.transform.rotation);
+                projectileInstance = Instantiate (effect, end.position, effect.transform.rotation);
 
                 // Play the player attack animation
                 player.GetComponent<Animator> ().SetTrigger ("attacking");
